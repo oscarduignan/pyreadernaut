@@ -4,7 +4,7 @@ from distutils.core import setup
 
 setup(
     name='pyreadernaut',
-    version='0.1',
+    version='0.3',
     description='Simple python wrapper around the Readernaut.com API.',
     author='Oscar Duignan',
     author_email='oscarduignan@gmail.com',

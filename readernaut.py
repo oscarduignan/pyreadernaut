@@ -25,7 +25,7 @@ def open_books_xml(username, category='', data=None):
     (http://groups.google.com/group/readernaut-api/web/restful-api-overview)
     """
     url = API_URL % (urllib.quote(username), 'books/%s' % urllib.quote(category))
-    return urllib2.urlopen(url, urllib.urlencode(data or {}))
+    return urllib2.urlopen('%s?%s' % (url, urllib.urlencode(data or {})))
 
 
 def open_notes_xml(username, data=None):
@@ -36,7 +36,7 @@ def open_notes_xml(username, data=None):
         data     - optional request data to be appended with urlencode
     """
     url = API_URL % (urllib.quote(username), 'notes')
-    return urllib2.urlopen(url, urllib.urlencode(data or {}))
+    return urllib2.urlopen('%s?%s' % (url, urllib.urlencode(data or {})))
 
 
 def open_contacts_xml(username, data=None):
@@ -47,7 +47,7 @@ def open_contacts_xml(username, data=None):
         data     - optional request data to be appended with urlencode
     """
     url = API_URL % (urllib.quote(username), 'contacts')
-    return urllib2.urlopen(url, urllib.urlencode(data or {}))
+    return urllib2.urlopen('%s?%s' % (url, urllib.urlencode(data or {})))
 
 
 def parse_books(xml):

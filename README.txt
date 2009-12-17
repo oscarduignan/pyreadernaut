@@ -39,11 +39,19 @@ The Readernaut API only returns the first 20 results, you can request the next
 
 You can control the order of the results in the same way.
 
-    book_list = readernaut.get_books('oscarduignan', 'reading', {'order_by': '-modified'})
+    book_list = readernaut.get_books('oscarduignan', 'reading', {'order': '-modified'})
 
 The above should be enough for most users, but you will find there are a few more
 functions which you may find useful if you look at the source code.
 
 Readernaut API documentation
 (http://groups.google.com/group/readernaut-api/web/restful-api-overview)
+
+-------
+Changes
+-------
+
+0.1 - initial release
+0.2 - readernaut API differed from their documentation, adjusted README.txt
+0.3 - query strings were not being appened to url correctly, fixed
 
